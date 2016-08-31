@@ -1,0 +1,171 @@
+
+#section{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 500px;
+}
+#title{
+    background-color: #fff;
+    /*overflow: hidden;*/
+    height:41px;
+    border-bottom: 2px solid #45B39E;
+}
+#title>li{
+    float:left;
+    text-align: center;
+    width:140px;
+    padding: 10px 20px;
+    color:#323A45;
+    /*transition: background 0.5s,color 0.5s;*/
+    cursor: pointer;
+    position:relative;
+}
+#title>li:hover,#title>li.active{
+    background: #45B39E;
+    color:#fff;
+}
+#title>li:hover ul{
+    display: block;
+}
+#title ul li:hover span{
+    padding:0 10px;
+}
+#title ul li span{
+    transition: padding 0.3s;
+}
+#title ul{
+    position: absolute;
+    left:10px;
+    top:41px;
+    width:120px;
+    border:2px solid #45B39E;
+    background: #fff;
+    display: none;
+    border-bottom-left-radius:60px;
+    border-bottom-right-radius:60px;
+    z-index: 100;
+}
+#title li{
+    padding:10px 0;
+    color:#323A45;
+}
+#content{
+    padding:20px;
+    color: #323A45;
+    border:2px solid #45B39E;
+    border-top: 0;
+    margin-bottom:20px;
+    overflow: hidden;
+}
+#content>div{
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+}
+#content>div:nth-child(odd),#content>div.odd{
+    background: #45B39E;
+    color:#fff;
+}
+#content>div:last-child{
+    display: block;
+    background: #fff;
+}
+#content>div.odd h2{
+    color:#fff;
+}
+#content>div.even{
+    margin:10px 0;
+    background: #fff;
+}
+#content>div.even p{
+    color:#323A45;
+}
+#content>div.even h2{
+    color:#323A45;
+}
+#content>div>div{
+    padding:15px;
+}
+#content>div>div>p{
+    line-height:25px;
+    text-indent: 32px;
+
+}
+#content h2{
+    color: #323A45;
+    margin-bottom:10px ;
+}
+#page{
+    float: right;
+    padding-top:20px;
+}
+#page li{
+    float: left;
+    margin-left:8px;
+    color:#323A45;
+    border:1px solid #ddd;
+    padding:5px 13px;
+    border-radius: 5px;
+}
+#page li:hover,#page li.active{
+    background: #323A45;
+    color:#fff;
+    cursor: pointer;
+}
+#foodIntro{
+    padding:20px;
+    color: #323A45;
+    border:2px solid #45B39E;
+    border-top: 0;
+    margin-bottom:20px;
+    overflow: hidden;
+}
+#foodIntro .left{
+    position: relative;
+}
+
+#foodIntro .left div img{
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+}
+#foodIntro .left div img.active{
+    opacity: 1;
+}
+#foodIntro .left div img{
+    opacity: 0;
+}
+#foodIntro .left ul img{
+    width: 100%;
+}
+#foodIntro .left>ul{
+    overflow: hidden;
+    margin-top:10px;
+    position: absolute;
+}
+#foodIntro .left>ul li{
+    box-sizing: border-box;
+    float: left;
+    width:30%;
+    border: 1px solid #ddd;
+    margin-right: 5%;
+    position: relative;
+}
+#foodIntro .left ul li:last-child{
+    margin-right: 0;
+}
+#foodIntro .left ul li b{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;
+    background: rgba(0,0,0,0.5);
+}
+#foodIntro .left ul li.active b{
+    background: rgba(0,0,0,0);
+}
+#foodIntro .right{
+    padding:0 20px;
+    text-indent: 24px;
+}

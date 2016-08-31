@@ -1,0 +1,211 @@
+#section {
+    min-height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    color: #323A45;
+}
+
+#msgSend, #msgShow {
+    border: 2px solid #45B39E;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#msgSend h2 {
+    color: #323A45;
+    text-align: center;
+}
+
+#msgSend textarea {
+    resize: none;
+    vertical-align: top;
+}
+
+#msgSend span {
+    display: inline-block;
+    padding: 5px;
+    color: #323A45;
+    width: 100px;
+    text-align: right;
+}
+
+#msgSend .content {
+    text-align: center;
+    overflow: hidden;
+}
+
+#msgSend p {
+    padding: 5px 0;
+}
+
+#msgSend input, #msgSend textarea {
+    border: 1px solid #323A45;
+    outline: none;
+    width: 60%;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#msgSend input {
+    height: 30px;
+}
+
+#msgSend textarea {
+    padding: 5px 2px;
+}
+
+#msgSend button {
+    color: #323A45;
+    background: #dddddd;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-family: "微软雅黑", "黑体";
+    cursor: pointer;
+    float: right;
+}
+
+#msgShow {
+    border: 0;
+    width: 90%;
+}
+
+#msgShow li {
+    color: #323A45;
+}
+
+#msgShow a {
+    color: #323A45;
+}
+
+#msgShow > div {
+    padding: 10px 0;
+}
+
+#msgShow > div:nth-child(odd) {
+    background: #edeae6;
+}
+
+#msgShow > div:nth-child(even) {
+    background: #fff;
+}
+
+#msgShow > div > ul {
+    padding-top: 20px;
+}
+
+#msgShow > div > ul li {
+    text-align: center;
+    margin: 5px 0;
+}
+
+#msgShow > div li img {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 31px;
+    background: #fff;
+    box-shadow: 0px 0px 4px 1px #fff;
+}
+
+#msgShow > div .myMsg {
+    overflow: hidden;
+}
+#msgShow > div .myMsg li {
+    padding: 5px;
+}
+#msgShow > div .myMsg li div {
+    display: inline;
+    line-height: 25px;
+    font-size: 14px;
+}
+#Login{
+    bottom: 50%;
+}
+#Login li{
+    background: #45B39E;
+}
+#PriIntro li{
+	padding:5px 0;
+}
+#Login li a{
+    padding: 5px 12px;
+}
+
+#Login li a:hover{
+    background: #323A45;
+    color: #fff;
+}
+
+.modal {
+    /*display:none;*/
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-dialog {
+    width: 400px;
+    background: #fff;
+    margin: 300px auto 0;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.modal-content h3 {
+    color: #323A45;
+    text-align: center;
+}
+
+.modal-content span {
+    color: #323A45;
+}
+
+.modal-content p {
+    width: 393px;
+    height: 23px;
+    border: 1px solid #e4393c;
+    background: rgba(227, 230, 114, 0.07);
+    line-height: 23px;
+    color: #e4393c;
+    margin: 10px 0;
+    padding: 5px 0;
+    padding-left: 5px;
+}
+
+.modal-content div {
+
+}
+
+.modal-content span {
+    margin-right: 6px;
+}
+
+.modal-content input {
+    border: 1px solid #ddd;
+    width: 340px;
+    height: 30px;
+    margin: 5px 0;
+}
+
+#bt-login{
+    width: 400px;
+    height: 35px;
+    margin-top: 5px;
+    background: #45B39E;
+    border-radius: 3px;
+    border: 0px;
+    color: #fff;
+    outline: none;
+    box-shadow: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font: 18px "微软雅黑";
+}
