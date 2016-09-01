@@ -83,17 +83,32 @@
 }
 
 #msgShow > div {
-    padding: 10px 0;
+    position:relative;
 }
 
 #msgShow > div:nth-child(odd) {
     background: #edeae6;
+    border:1px solid #ddd;
+    border-radius: 10px;
 }
-
+#msgShow>div{
+    margin:30px 0;
+}
 #msgShow > div:nth-child(even) {
     background: #fff;
+    border:1px solid #ddd;
+    border-radius: 10px;
 }
+#msgShow>div .photo{
+    position:absolute;
+    left:35px;
+    top:-76px;
 
+}
+#msgShow .photo li:first-child{
+    width:100px;
+    height:100px;
+}
 #msgShow > div > ul {
     padding-top: 20px;
 }
@@ -106,13 +121,15 @@
 #msgShow > div li img {
     padding: 5px;
     border: 1px solid #ddd;
-    border-radius: 31px;
+    border-radius: 56px;
     background: #fff;
     box-shadow: 0px 0px 4px 1px #fff;
+    width:100%;
 }
 
 #msgShow > div .myMsg {
     overflow: hidden;
+    padding:10px;
 }
 #msgShow > div .myMsg li {
     padding: 5px;
