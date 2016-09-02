@@ -60,7 +60,6 @@
 #content>div{
     display: flex;
     align-items: center;
-    border-radius: 100px;
 }
 #content>div:nth-child(odd),#content>div.odd{
     background: #45B39E;

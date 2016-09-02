@@ -6,10 +6,15 @@
 		<link rel="stylesheet" href="css/common.css"> 
 		<link rel="stylesheet" href="css/spot.css">
 		<style>
-
+			#section{
+				width: 80%;
+				margin:0 auto;
+			}
 			#main{
 				position: relative;
-				height:300px;
+
+				height:280px;
+
 				margin-top:20px;
 			}
 			#main div{
@@ -57,6 +62,34 @@
 				opacity:0;
 				display: none;
 			}
+			#content {
+				margin:0 auto;
+				margin-bottom:20px;
+				width:80%;
+				position: relative;
+				background: #edeae6;
+				border-radius: 20px;
+				height:200px;
+			}
+			#content div{
+				color:#323A45;
+				padding:20px;
+				text-indent:  24px;
+				position: absolute;
+				opacity: 0;
+			}
+			#content b {
+				position: absolute;
+				border: 20px solid transparent;
+				border-bottom: 25px solid #edeae6;
+				left: 50%;
+				top: -45px;
+				margin-left: -20px;
+				z-index: 100;
+			}
+			#content div:nth-child(1),#content div.active{
+				opacity: 1;
+			}
 		</style>
 	</head>
 	<body>
@@ -66,22 +99,6 @@
 		<header id="header">
 		</header>
 		<section id="section">
-			<!--<div id="main">-->
-				<!--<div id="d1"><img src="img/shundiling.jpg"><p></p></div>-->
-				<!--<div id="d2"><img src="img/pujiusi.jpg"><p></p></div>-->
-				<!--<div id="d3"><img src="img/shundiling.jpg"><p></p></div>-->
-				<!--<div id="d4"><img src="img/lijiazhuangyuan.jpg"><p ></p></div>-->
-				<!--<div id="d5" class="active"><img src="img/shundiling.jpg"><p  style="display:none"></p></div>-->
-				<!--<div id="d6"><img src="img/yonglegong.jpg"><p></p></div>-->
-				<!--<div id="d7"><img src="img/shundiling.jpg"><p></p></div>-->
-				<!--<div id="d8"><img src="img/guanquelou.jpg"><p></p></div>-->
-			<!--</div>-->
-			<!--<div id="intro">-->
-				<!--<div class="active">-->
-					<!--<b></b>-->
-					<!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nulla asperiores dolore explicabo inventore eligendi reiciendis neque blanditiis accusamus accusantium vel ea sit tempora ab fuga quae ullam. Atque error?-->
-				<!--</div>-->
-			<!--</div>-->
 			<div id="main">
 				<!--<div><img src="img/dayudu_s.jpg" alt=""/></div>-->
 				<div><img src="img/shundiling_s.jpg" alt=""/></div>
@@ -90,7 +107,15 @@
 				<div><img src="img/guanquelou_s.jpg" alt=""/></div>
 				<div><img src="img/lijiazhuangyuan_s.jpg" alt=""/></div>
 				<div><img src="img/guandimiao_s.jpg" alt=""/></div>
-
+			</div>
+			<div id="content">
+				<div class="active">永乐宫 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cumque dolorem doloribus ea expedita facilis id nisi perspiciatis placeat ratione sed, tempora ullam ut veritatis vero voluptatem voluptatum? Aliquid?</div>
+				<div>鹳雀楼 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid culpa, distinctio dolore dolorum eius est explicabo id, ipsum libero magnam maiores odio odit officiis porro quibusdam quis sit ullam!</div>
+				<div>李家庄园 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam dolores earum harum illo iste itaque laborum nam quaerat quia, rem sit velit. Cum error est fugit ipsum perspiciatis. Natus.</div>
+				<div>关帝庙 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur earum magnam perspiciatis repellat. Cupiditate fuga fugit laudantium nihil similique. Est ex harum, quas quod repellendus sapiente tempora vel voluptas voluptate!</div>
+				<div>舜帝陵 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, amet at deleniti facere illo illum molestias obcaecati odio, optio quaerat temporibus totam, vel. A dolores laborum non reiciendis sunt voluptates!</div>
+				<div>风陵渡 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur cumque eum hic iure, laboriosam modi non porro quasi repellendus saepe sed ut vitae! Corporis dolore fugit illum numquam quam.</div>
+				<b></b>
 			</div>
 		</section>
 		<footer id="footer"></footer>
@@ -103,7 +128,6 @@
 			var othleft4=window.innerWidth*0.75 - 225+'px';
 			var othleft5=window.innerWidth - 270+'px';
 			var othleft6=window.innerWidth - 90+'px';
-
 			function moveAuto(){
 				$("#main div:first-child").animate({
 					'left':'-90px',
@@ -153,6 +177,18 @@
 					'opacity':'1'
 				},500,function(){
 					$(this).css("z-index","5");
+				});
+				$("#content .active").animate({
+					'opacity':'0'
+				},500,function(){
+					$(this).removeClass("active");
+					$(this).insertBefore("#content b");
+				});
+				$("#content .active").next('div').animate({
+					'opacity':'1'
+				},500,function(){
+					$(this).addClass("active");
+					console.log(this);
 				});
 			}
 			function moveAutoRight(){
