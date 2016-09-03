@@ -109,8 +109,12 @@
     width:100px;
     height:100px;
 }
+#msgShow >div >div{
+    padding-top:50px;
+}
 #msgShow > div > ul {
     padding-top: 20px;
+
 }
 
 #msgShow > div > ul li {

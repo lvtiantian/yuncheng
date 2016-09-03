@@ -64,6 +64,8 @@
 #content>div:nth-child(odd),#content>div.odd{
     background: #45B39E;
     color:#fff;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
 }
 #content>div:last-child{
     display: block;

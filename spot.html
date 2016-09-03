@@ -5,92 +5,6 @@
 		<meta charset="utf-8"/> 
 		<link rel="stylesheet" href="css/common.css"> 
 		<link rel="stylesheet" href="css/spot.css">
-		<style>
-			#section{
-				width: 80%;
-				margin:0 auto;
-			}
-			#main{
-				position: relative;
-
-				height:280px;
-
-				margin-top:20px;
-			}
-			#main div{
-				position: absolute;
-
-			}
-			#main div img{
-				width:100%;
-			}
-			#main div:first-child,#main div:nth-child(5){
-				width:270px;
-				height:159px ;
-				z-index: 10;
-				top:53px;
-			}
-			#main div:first-child{
-				left:0;
-			}
-			#main div:nth-child(5){
-				left:calc(100% - 270px);
-			}
-			#main div:nth-child(2),#main div:nth-child(4){
-				width:360px;
-				height: 212px;
-				z-index: 30;
-				top:26.5px;
-			}
-			#main div:nth-child(2){
-				left:calc(33% - 225px);
-			}
-			#main div:nth-child(4){
-				left:calc(75% - 225px);
-			}
-			#main div:nth-child(3){
-				 width:450px;
-				 height:265px;
-				 left:calc(50% - 225px);
-				 z-index: 35;
-			 }
-			#main div:nth-child(6){
-				left:calc(100% - 90px);
-				width:180px;
-				height:106px;
-				top:79.5px;
-				opacity:0;
-				display: none;
-			}
-			#content {
-				margin:0 auto;
-				margin-bottom:20px;
-				width:80%;
-				position: relative;
-				background: #edeae6;
-				border-radius: 20px;
-				height:200px;
-			}
-			#content div{
-				color:#323A45;
-				padding:20px;
-				text-indent:  24px;
-				position: absolute;
-				opacity: 0;
-			}
-			#content b {
-				position: absolute;
-				border: 20px solid transparent;
-				border-bottom: 25px solid #edeae6;
-				left: 50%;
-				top: -45px;
-				margin-left: -20px;
-				z-index: 100;
-			}
-			#content div:nth-child(1),#content div.active{
-				opacity: 1;
-			}
-		</style>
 	</head>
 	<body>
 		<div id="Totop">
@@ -110,9 +24,14 @@
 			</div>
 			<div id="content">
 				<div class="active">永乐宫 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cumque dolorem doloribus ea expedita facilis id nisi perspiciatis placeat ratione sed, tempora ullam ut veritatis vero voluptatem voluptatum? Aliquid?</div>
-				<div>鹳雀楼 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid culpa, distinctio dolore dolorum eius est explicabo id, ipsum libero magnam maiores odio odit officiis porro quibusdam quis sit ullam!</div>
+				<div>鹳雀楼
+					鹳雀楼，又名鹳鹊楼，因时有鹳雀栖其上而得名，位于山西省永济市蒲州古城西面的黄河东岸。始建于北周 ，由于楼体壮观，结构奇巧，加之周围风景秀丽，唐宋之际文人学士登楼赏景留下许多不朽诗篇，以王之涣《登鹳雀楼》最富盛名。1997年12月，该楼的复建工程开始，2002年9月26日，新鹳雀楼落成并开始接待游人。新建的鹳雀楼为仿唐形制，四檐三层。
+					中文名称 鹳雀楼 外文名称 Guanque tower 地理位置 山西省永济市 气候类型 暖温带半湿润大陆性季风气候 占地面积 2.064平方公里 开放时间 08:00-18:00（夏 季）；08:00-17:30（冬季） 景点级别国家AAAA级旅游景区 门票价格 60元 著名景点鹳雀楼，影壁 始建时间 公元557年至580年（北周） 废毁时间 元代初 复建时间 1997年12月 建议游玩时长 2-3小时 适宜游玩季节 5月--10月
+				</div>
 				<div>李家庄园 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam dolores earum harum illo iste itaque laborum nam quaerat quia, rem sit velit. Cum error est fugit ipsum perspiciatis. Natus.</div>
-				<div>关帝庙 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur earum magnam perspiciatis repellat. Cupiditate fuga fugit laudantium nihil similique. Est ex harum, quas quod repellendus sapiente tempora vel voluptas voluptate!</div>
+				<div>关帝庙
+
+				</div>
 				<div>舜帝陵 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, amet at deleniti facere illo illum molestias obcaecati odio, optio quaerat temporibus totam, vel. A dolores laborum non reiciendis sunt voluptates!</div>
 				<div>风陵渡 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur cumque eum hic iure, laboriosam modi non porro quasi repellendus saepe sed ut vitae! Corporis dolore fugit illum numquam quam.</div>
 				<b></b>
@@ -123,11 +42,11 @@
 		<script src="js/common.js"></script>
 		<script src="js/spot.js"></script>
 		<script>
-			var mainleft=window.innerWidth/2-225+'px';
-			var othleft2=window.innerWidth*0.33 - 225+'px';
-			var othleft4=window.innerWidth*0.75 - 225+'px';
-			var othleft5=window.innerWidth - 270+'px';
-			var othleft6=window.innerWidth - 90+'px';
+			var mainleft=$("#main").width()/2-225+'px';
+			var othleft2=$("#main").width()*0.30 - 225+'px';
+			var othleft4=$("#main").width()*0.75 - 225+'px';
+			var othleft5=$("#main").width() - 270+'px';
+			var othleft6=$("#main").width() - 90+'px';
 			function moveAuto(){
 				$("#main div:first-child").animate({
 					'left':'-90px',
@@ -188,7 +107,6 @@
 					'opacity':'1'
 				},500,function(){
 					$(this).addClass("active");
-					console.log(this);
 				});
 			}
 			function moveAutoRight(){
@@ -241,6 +159,17 @@
 				},500,function(){
 					$(this).css("z-index","5").css('display','none');
 				});
+				$("#content div:nth-child(6)").insertBefore("#content .active");
+				$("#content .active").animate({
+					'opacity':'0'
+				},500,function(){
+					$(this).removeClass("active");
+				});
+				$("#content .active").prev('div').animate({
+					'opacity':'1'
+				},500,function(){
+					$(this).addClass("active");
+				});
 			}
 			var time=setInterval(moveAuto,3000);
 			$("#main div").mouseover(function(){
@@ -256,12 +185,10 @@
 					var timer=setInterval(function(){
 						moveAuto();
 						i--;
-						console.log(i);
 						if(i==3){
 							clearInterval(timer);
 							timer=null;
 						}
-
 					},1000);
 				}else if(i<3){
 					var timer=setInterval(function(){
@@ -272,7 +199,6 @@
 							clearInterval(timer);
 							timer=null;
 						}
-
 					},1000);
 				}
 			})
