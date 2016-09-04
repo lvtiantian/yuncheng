@@ -4,9 +4,9 @@ $("#header").load("header.php",function(){
 });
 $("#footer").load("footer.php");
 $("#Login ul li a").click(function(e){
-	e.preventDefault();
 	var target=e.target;
 	if($(target).attr("href")=="login"){
+		e.preventDefault();
 		$(".modal").show();
 	}
 });
