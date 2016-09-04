@@ -110,7 +110,7 @@
     height:100px;
 }
 #msgShow >div >div{
-    padding-top:50px;
+    padding:50px 10px 0 10px;
 }
 #msgShow > div > ul {
     padding-top: 20px;

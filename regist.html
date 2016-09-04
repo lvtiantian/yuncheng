@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>魅力运城-用户注册页面</title>
+    <style>
+        #title{
+            text-align:center;
+        }
+        #formList{
+            border:1px solid #ddd;
+            width:600px;
+            margin:0 auto;
+            border-radius:5px;
+        }
+        #formList span{
+            display:inline-block;
+            font-weight:bold;
+            width:100px;
+            text-align:right;
+            margin:10px 0;
+        }
+        #formList input{
+            border:1px solid #ddd;
+            height:28px;
+            border-radius:3px;
+            width:198px;
+            padding:0;
+            margin-top:10px;
+            outline:none;
+        }
+        #formList input:focus{
+            box-shadow:0 0 3px 1px #71d1ff;
+            border:1px solid #bbe2df;
+        }
+        #formList input[type='submit']{
+            background: #00c000;
+            color:#fff;
+            border:0;
+            outline:none;
+            cursor:pointer;
+            width:200px;
+            margin-bottom:10px;
+            font-size:15px;
+        }
+        b{
+            display:inline-block;
+            width:250px;
+            line-height:30px;
+            border:1px solid #ddd;
+            color:#fff;
+            background:#aaa;
+            border-radius:3px;
+            padding:0 10px;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="title">用户注册页面</h1>
+        <div id="formList">
+            <form action="">
+                <span>用户名：</span><input id="uname" type="text" placeholder="请输入用户名" autofocus required pattern="^[a-zA-Z0-9]{8,16}$"/>
+                <b>请输入8至16位的英文或数字</b>
+                <br/>
+                <span>密码：</span><input id="upwd" type="password" placeholder="请输入密码" required pattern="^[0-9]{6,12}$"/>
+                <b></b><br/>
+                <span>电子邮件：</span><input id="email" type="email" placeholder="请输入电子邮件" required/>
+                <b></b><br/>
+                <span>个人主页：</span><input id="zone" type="url" placeholder="请输入个人主页"/>
+                <b></b><br/>
+                <span>年龄：</span><input id="age" type="number" placeholder="请输入年龄" required min="18" max="50" step="1"/>
+                <b></b><br/>
+                <span>出生日期：</span><input id="birth" type="date"/>
+                <b></b><br/>
+                <span></span><input type="submit" value="注册"/>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        var b=document.getElementsByTagName("b");
+        for(var i=0;i< b.length;i++){
+            b[i].style.display="none";
+        }
+        uname .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入8至16位的英文或数字";
+            b.style.background="#aaa";
+        }
+        uname .onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="用户名不能为空";
+            }else if(this.validity.patternMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="用户名输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="用户名正确";
+            }
+        }
+        upwd .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入6至12位的数字";
+            b.style.background="#aaa";
+        }
+        upwd.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="密码不能为空";
+            }else if(this.validity.patternMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="密码输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="密码正确";
+            }
+        }
+        email .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入您的电子邮件地址";
+            b.style.background="#aaa";
+        }
+        email.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="电子邮件不能为空";
+            }else if(this.validity.typeMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="电子邮件输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="电子邮件正确";
+            }
+        }
+        zone .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入您的个人主页(该项可省略)";
+            b.style.background="#aaa";
+        }
+        zone.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#00c000";
+                b.innerHTML="个人主页输入正确";
+            }else if(this.validity.typeMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="个人主页输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="个人主页输入正确";
+            }
+        }
+        age .onfocus=function() {
+            var b = this.nextElementSibling;
+            b.style.display = "inline-block";
+            b.innerHTML="请输入您的年龄";
+            b.style.background="#aaa";
+        }
+        age.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="年龄输入错误";
+            }else if(this.validity.rangeOverflow){
+                b.style.background="#d70000";
+                b.innerHTML="年龄太大了";
+            }else if(this.validity.rangeUnderflow){
+                b.style.background="#d70000";
+                b.innerHTML="年龄太小了";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="年龄输入正确";
+            }
+        }
+        birth .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请选择您的出生日期";
+            b.style.background="#aaa";
+        }
+        birth.onblur=function(){
+            var b=this.nextElementSibling;
+            b.style.display="none";
+        }
+    </script>
+</body>
+</html>
