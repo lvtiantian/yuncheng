@@ -61,14 +61,17 @@
     position: relative;
     background: #edeae6;
     border-radius: 20px;
-    height:400px;
+    min-height:450px;
 }
 #content div{
     color:#323A45;
     padding:20px;
     text-indent:  24px;
-    position: absolute;
+    /*position: absolute;*/
+    left:0;
+    top:0;
     opacity: 0;
+    width: 100%;
     display: none;
 }
 #content div.active{
@@ -82,7 +85,7 @@
     border-bottom: 25px solid #edeae6;
     left: 50%;
     top: -45px;
-    margin-left: -20px;
+    margin-left: -10px;
     z-index: 100;
 }
 #content div:nth-child(1),#content div.active{
@@ -94,9 +97,9 @@
     padding:5px 0;
     border-radius: 5px;
 }
-#content div ul li p:first-child:hover{
-    background: #438c77;
+#content div ul li p:first-child:hover,#content div ul li p.active{
     cursor: pointer;
+    background: #438c77;
 }
 #content div.active h3{
     text-align: center;
