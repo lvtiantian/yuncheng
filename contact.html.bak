@@ -21,7 +21,7 @@
 							<span>密&nbsp;&nbsp; 码:</span><input name="upwd" id="upwd" value="123456">
 						</div>
 						<button type="button" id="bt-login">登 录</button>
-						<span>还没有账号，快去<a href="regist.html"> 注册 </a>吧</span>
+						<span>还没有账号，快去<a href="regist.html">注册</a>吧</span>
 					</form>
 				</div>
 			</div>

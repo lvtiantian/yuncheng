@@ -251,7 +251,7 @@
 }
 #login-form>span{
 	float:right;
-	margin-top:10px;
+	padding-top:10px;
 	font-size:14px;
 
 }

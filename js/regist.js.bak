@@ -1,0 +1,34 @@
+var game={
+	PSIZE:0,
+	MAXTOP:0,
+	MAXLEFT:0,
+	init:function(){
+		this.PSIZE=parseFloat(getComputedStyle(pop).width);
+		this.MAXTOP=innerHeight-this.PSIZE;
+		this.MAXLEFT=innerWidth-this.PSIZE;
+	},
+	start:function(){
+		var t=parseFloat(Math.random()*(this.MAXTOP+1));
+		var l=parseFloat(Math.random()*(this.MAXLEFT+1));
+		pop.style.left=l+"px";
+		pop.style.top=t+"px";
+		var me=this;
+		pop.addEventListener("mouseover",
+			function(e){
+				while(true){
+					var t=parseFloat(Math.random()*(me.MAXTOP+1));
+					var l=parseFloat(Math.random()*(me.MAXLEFT+1));
+					var x=e.clientX;
+					var y=e.clientY;
+					if(!(x>=l&&x<(l+me.PSIZE)&&y>=t&&y<(t+me.PSIZE))){
+						this.style.left=l+"px";
+						this.style.top=t+"px";
+						break;
+					}
+				} 
+			}
+		)
+	}
+}
+game.init();
+game.start();

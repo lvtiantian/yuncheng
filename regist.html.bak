@@ -66,6 +66,14 @@
                 <br/>
                 <span>密码：</span><input id="upwd" type="password" placeholder="请输入密码" required pattern="^[0-9]{6,12}$"/>
                 <b></b><br/>
+                <span>电子邮件：</span><input id="email" type="email" placeholder="请输入电子邮件" required/>
+                <b></b><br/>
+                <span>个人主页：</span><input id="zone" type="url" placeholder="请输入个人主页"/>
+                <b></b><br/>
+                <span>年龄：</span><input id="age" type="number" placeholder="请输入年龄" required min="18" max="50" step="1"/>
+                <b></b><br/>
+                <span>出生日期：</span><input id="birth" type="date"/>
+                <b></b><br/>
                 <span></span><input type="submit" value="注册"/>
             </form>
         </div>
@@ -114,10 +122,76 @@
                 b.innerHTML="密码正确";
             }
         }
-<<<<<<< HEAD
-       
-=======
->>>>>>> refs/remotes/origin/gh-pages
+        email .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入您的电子邮件地址";
+            b.style.background="#aaa";
+        }
+        email.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="电子邮件不能为空";
+            }else if(this.validity.typeMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="电子邮件输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="电子邮件正确";
+            }
+        }
+        zone .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请输入您的个人主页(该项可省略)";
+            b.style.background="#aaa";
+        }
+        zone.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#00c000";
+                b.innerHTML="个人主页输入正确";
+            }else if(this.validity.typeMismatch){
+                b.style.background="#d70000";
+                b.innerHTML="个人主页输入有误";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="个人主页输入正确";
+            }
+        }
+        age .onfocus=function() {
+            var b = this.nextElementSibling;
+            b.style.display = "inline-block";
+            b.innerHTML="请输入您的年龄";
+            b.style.background="#aaa";
+        }
+        age.onblur=function(){
+            var b=this.nextElementSibling;
+            if(this.validity.valueMissing){
+                b.style.background="#d70000";
+                b.innerHTML="年龄输入错误";
+            }else if(this.validity.rangeOverflow){
+                b.style.background="#d70000";
+                b.innerHTML="年龄太大了";
+            }else if(this.validity.rangeUnderflow){
+                b.style.background="#d70000";
+                b.innerHTML="年龄太小了";
+            }else if(this.validity.valid){
+                b.style.background="#00c000";
+                b.innerHTML="年龄输入正确";
+            }
+        }
+        birth .onfocus=function(){
+            var b=this.nextElementSibling;
+            b.style.display="inline-block";
+            b.innerHTML="请选择您的出生日期";
+            b.style.background="#aaa";
+        }
+        birth.onblur=function(){
+            var b=this.nextElementSibling;
+            b.style.display="none";
+        }
     </script>
 </body>
 </html>

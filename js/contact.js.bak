@@ -58,7 +58,7 @@ $.getJSON("data/select_msg.php",function(data){
 });
 $("#btnSend").on("click",function(){
 	if(window.sessionStorage.length==0){
-		$(".tologin").show();
+		$(".tologin").show(1000);
 	};
 })
 $("#bt-login").on("click",function(){
