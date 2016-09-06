@@ -1,4 +1,6 @@
-$("#header").load("header.php");
+$("#header").load("header.php",function(){
+    login();
+});
 $("#footer").load("footer.php");
 screen();
 function screen(){

@@ -168,7 +168,7 @@ body{
 	background:#323A45;
 	border-bottom:3px solid #45B39E;
 }
-#header>div{
+#header>div:first-child{
 	width:80%;
 	margin:0 auto;
 }
@@ -224,4 +224,128 @@ body{
     line-height:25px;
     float:left;
     margin-right:20px;
+}
+
+#Login{
+    bottom: 50%;
+    margin-bottom:-36px;
+}
+#Login li{
+    background: #45B39E;
+}
+#PriIntro li{
+    padding:5px 0;
+}
+#Login li a{
+    padding: 5px 12px;
+}
+
+#Login li a:hover{
+    background: #323A45;
+    color: #fff;
+}
+.tologin{
+    position:fixed;
+    right:70px;
+    top:50%;
+    margin-top:-35px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    z-index:10;
+    background:#f00;
+    display:none;
+}
+.tologin p{
+    padding:15px 10px;
+}
+.tologin i{
+    border:6px solid transparent;
+    border-left:12px solid #f00;
+    position:absolute;
+    right:-18px;
+    top:50%;
+    z-index:105;
+    margin-top:-11px;
+}
+.modal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-dialog {
+    position: absolute;
+    width: 400px;
+    background: #fff;
+    top:50%;
+    left:50%;
+    transform: translate(-220px,-140px);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.modal-content h3 {
+    color: #323A45;
+    text-align: center;
+}
+
+.modal-content span {
+    color: #323A45;
+}
+
+.modal-content p {
+    width: 393px;
+    height: 23px;
+    border: 1px solid #e4393c;
+    background: rgba(227, 230, 114, 0.07);
+    line-height: 23px;
+    color: #e4393c;
+    margin: 10px 0;
+    padding: 5px 0;
+    padding-left: 5px;
+}
+
+.modal-content div {
+
+}
+
+.modal-content span {
+    margin-right: 6px;
+}
+
+.modal-content input {
+    border: 1px solid #ddd;
+    width: 340px;
+    height: 30px;
+    margin: 5px 0;
+}
+#login-form{
+    overflow:hidden;
+}
+#login-form>span{
+    float:right;
+    margin-top:10px;
+    font-size:14px;
+
+}
+#login-form a{
+    color:#45B39E;
+}
+#bt-login{
+    width: 400px;
+    height: 35px;
+    margin-top: 5px;
+    background: #45B39E;
+    border-radius: 3px;
+    border: 0px;
+    color: #fff;
+    outline: none;
+    box-shadow: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font: 18px "微软雅黑";
 }

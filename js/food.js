@@ -1,4 +1,5 @@
 $("#header").load("header.php",function(){
+	login();
 	$("#header ul.nav li.active").removeClass("active");
 	$("#header ul.nav li:nth-child(3)").addClass("active");
 });
