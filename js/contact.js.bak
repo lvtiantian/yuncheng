@@ -7,7 +7,8 @@ $("#Login ul li a").click(function(e){
 	var target=e.target;
 	if($(target).attr("href")=="login"){
 		e.preventDefault();
-		$(".modal").show();
+		$(".tologin").hide();
+		$(".modal").show(1000);
 	}
 });
 $.getJSON("data/select_msg.php",function(data){
@@ -58,7 +59,7 @@ $.getJSON("data/select_msg.php",function(data){
 });
 $("#btnSend").on("click",function(){
 	if(window.sessionStorage.length==0){
-		$(".tologin").show(1000);
+		$(".tologin").show();
 	};
 })
 $("#bt-login").on("click",function(){

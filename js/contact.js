@@ -7,6 +7,7 @@ $("#Login ul li a").click(function(e){
 	var target=e.target;
 	if($(target).attr("href")=="login"){
 		e.preventDefault();
+		$(".tologin").hide();
 		$(".modal").show();
 	}
 });
