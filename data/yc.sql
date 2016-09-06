@@ -16,6 +16,7 @@ CREATE TABLE yc_msgs(
 	user_name varchar(100),
 	msg_title varchar(20),
 	msg_content varchar(1024),
-	date varchar(100)
+	date bigint
 );
-INSERT INTO yc_msgs VALUES(NULL,'lvtian', '你好,世界', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, eaque, error est eum fuga id incidunt molestias nemo neque numquam praesentium provident quisquam quod ratione, recusandae repellat similique ut veniam!','2016-8-29 15:30');
+INSERT INTO yc_msgs VALUES(NULL,'lvtian', '你好,世界', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, eaque, error est eum fuga id incidunt molestias nemo neque numquam praesentium provident quisquam quod ratione, recusandae repellat similique ut veniam!',1472103940308);
+INSERT INTO yc_msgs VALUES(NULL,'majili', '不好,世界', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, eaque, error est eum fuga id incidunt molestias nemo neque numquam praesentium provident quisquam quod ratione, recusandae repellat similique ut veniam!',1473113940308);
