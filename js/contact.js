@@ -2,9 +2,11 @@ $("#header").load("header.php",function(){
 	login();
 	$("#header ul.nav li.active").removeClass("active");
 	$("#header ul.nav li:nth-child(4)").addClass("active");
+	if(window.sessionStorage.length!==0){
+		$("#Login").hide();
+	}
 });
 $("#footer").load("footer.php");
-
 $.getJSON("data/select_msg.php",function(data){
 	$(data).each(function(){
 		var date=new Date(parseInt(this.date));
@@ -55,7 +57,8 @@ $("#btnSend").click(function(){
 	if(window.sessionStorage.length==0){
 		$(".tologin").show();
 	}else{
-		console.log(window.sessionStorage.getItem(key));
+		var key=window.sessionStorage.key(0);
+		var uname=window.sessionStorage.getItem(key);
 		var title=$("input[name='title']").val();
 		var mainText=$("textarea[name='mainText']").val();
 		var date=new Date();

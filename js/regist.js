@@ -64,6 +64,7 @@ repwd.onblur=function(){
 	var p=this.nextElementSibling.nextElementSibling;
 	if($(this).val()!==$("#upwd").val()){
 		$(p).html("两次密码输入不一致");
+		$(p).css("color","#f00");
 
 	}else if($(this).val()==$("#upwd").val()&&$(this).parent().prev().children(".vali_Info").css("display")=="none"){
 		$(p).hide();

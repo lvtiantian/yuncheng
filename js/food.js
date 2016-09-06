@@ -2,6 +2,9 @@ $("#header").load("header.php",function(){
 	login();
 	$("#header ul.nav li.active").removeClass("active");
 	$("#header ul.nav li:nth-child(3)").addClass("active");
+	if(window.sessionStorage.length!==0){
+		$("#Login").hide();
+	}
 });
 $("#footer").load("footer.php");
 (function(){
@@ -11,6 +14,7 @@ $("#footer").load("footer.php");
 	var allcount=$("#content>div.col-md-12").length-1;
 	showPage(allcount,"col-md-12");
 })();
+
 $("#title>li").on("click",function(e){
 	var target= e.target;
 	$("#title>li.active").removeClass("active");

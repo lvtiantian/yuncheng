@@ -1,5 +1,8 @@
 $("#header").load("header.php",function(){
     login();
+    if(window.sessionStorage.length!==0){
+        $("#Login").hide();
+    }
 });
 $("#footer").load("footer.php");
 screen();
@@ -12,6 +15,7 @@ function screen(){
     $(".content-slider div").css("overflow","hidden");
     $("#banner").css("height",h+$(".content-slider div").height()+80);
 }
+
 var arr=[];
 setInterval(function(){
     var iw=window.innerWidth;

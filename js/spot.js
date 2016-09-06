@@ -2,6 +2,9 @@ $("#header").load("header.php",function(){
 	login();
 	$("#header ul.nav li.active").removeClass("active");
 	$("#header ul.nav li:nth-child(2)").addClass("active");
+	if(window.sessionStorage.length!==0){
+		$("#Login").hide();
+	}
 });
 $("#footer").load("footer.php");
 screen();
@@ -18,3 +21,4 @@ setInterval(function(){
 		arr=[];
 	}
 },500);
+

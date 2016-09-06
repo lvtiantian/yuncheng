@@ -4,114 +4,7 @@
     <meta charset="UTF-8">
     <title>魅力运城-用户注册页面</title>
 	<link rel="stylesheet" href="css/common.css" />
-    <style>
-		body{
-			overflow: hidden;
-		}
-		img{
-			position: absolute;
-			height: 100%;
-		}
-		section{
-			position: absolute;
-			top:50%;
-			transform: translateY(-190px);
-			right:0;
-			left:0;
-			background-color:rgba(255,255,255,0.4);
-			padding:20px;
-		}
-		#title{
-			text-align:center;
-			color:#323A45;
-			line-height: 50px;
-			font-family: "微软雅黑";
-		}
-		#formList{
-			color:#323A45;
-			font-size:14px;
-			width:420px;
-			margin:0 auto;
-			border-radius:8px;
-			border: 1px solid #ddd;
-			background: #fff;
-			padding:20px;
-		}
-		#formList div:not(:last-child){
-			height:70px;
-		}
-		#formList span:first-child{
-			display:inline-block;
-			width:100px;
-			text-align:right;
-			margin:10px 0;
-			font-size: 15px;
-			font-family: "微软雅黑";
-		}
-		#formList input{
-			   border:1px solid #ddd;
-			   height:30px;
-			   border-radius:3px;
-			   width:270px;
-			   padding:0;
-			   margin-top:10px;
-			   outline:none;
-		   }
-		   #formList input:focus{
-			   box-shadow:0 0 3px 1px #71d1ff;
-			   border:1px solid #bbe2df;
-		   }
-		   #formList input[type='submit']{
-			   background: #00c000;
-			   color:#fff;
-			   border:0;
-			   outline:none;
-			   cursor:pointer;
-			   width:200px;
-			   margin-bottom:10px;
-			   font-size:15px;
-		   }
-		   #formList p{
-			   line-height:20px;
-			   color:#323A45;
-			   border-radius:3px;
-			   margin-left:105px;
-			   font-size:12px;
-			   font-family: "微软雅黑";
-		   }
-		   #formList button{
-			   width:400px;
-			   background:#45B39E;
-			   font:16px/30px "微软雅黑";
-			   border:0;
-			   border-radius:5px;
-			   outline: none;
-			   display: block;
-			   margin:5px auto;
-		   }
-			#formList button:hover{
-				background: #438c77;
-			}
-			#formList div span:nth-child(3).ok{
-				display: inline-block;
-				width:18px;
-				height:18px;
-				background-image: url("img/ok.png");
-				margin-bottom: -3px;
-			}
-			.success{
-				color:#323A45;
-				font: 20px/40px "微软雅黑";
-				text-align: center;
-			}
-		.success a{
-			color: #2d70b3;
-
-		}
-		.success a:hover{
-			text-decoration: underline;
-		}
-    </style>
+	<link rel="stylesheet" href="css/regist.css" />
 </head>
 <body>
 <img src="img/regist.jpg" alt=""/>
@@ -123,7 +16,7 @@
 				<input name="username" id="uname"
 		 placeholder="请输入用户名" autofocus required pattern="^[a-zA-Z0-9]{6,16}$"/>
 				<span>*</span>
-				<p class="vali_Info">请输入8至16位的英文或数字</p>
+				<p class="vali_Info">请输入6至16位的英文或数字</p>
 			</div>
 			<div>
 				<span>密  码：</span>
