@@ -9,7 +9,8 @@
 	$result=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_assoc($result);
 	if(count($row)>0){
-		$arr=["msg"=>"SUCC","user_id"=>1,"uname"=>"$uname"];
+		$uid=$row['user_id'];
+		$arr=["msg"=>"SUCC","user_id"=>"$uid","uname"=>"$uname"];
 		echo json_encode($arr);
 	}else{
 		$arr=["msg"=>"ERR","reason"=>"用户名或密码错误","sql"=>"$sql"];

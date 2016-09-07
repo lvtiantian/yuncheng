@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>魅力运城-用户中心</title>
+		<meta charset="utf-8"/> 
+		<link rel="stylesheet" href="css/common.css"> 
+		<link rel="stylesheet" href="css/personal.css">
+		<link rel="icon" href="img/favicon.ico">
+		<style>
+			#section{
+				min-height:700px;
+				width:80%;
+				margin:20px auto;
+				color:#323A45;
+			}
+			#title{
+				background: #45B39E;
+				width:200px;
+				float: left;
+				overflow:hidden;
+				padding:20px 0;
+				border-top-left-radius:5px;
+				border-bottom-left-radius:5px;
+			}
+			#title li{
+				overflow:hidden;
+				text-align: center;
+			}
+			#title a{
+				display: inline-block;
+				color:#fff;
+				padding:9px 57px;
+				margin-left:20px;
+				border:2px solid transparent;
+				border-right:0;
+				border-top-left-radius:5px;
+				border-bottom-left-radius:5px;
+			}
+			#title a:hover,#title a.active{
+				background: #fff;
+				border-color:#ddd;
+			}
+			#main{
+				margin-left:220px;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header">
+		</header>
+		<section id="section">
+			<ul id="title">
+				<li><a href="" class="active">个人信息</a></li>
+				<li><a href="">我的留言</a></li>
+				<li><a href="">回复我的</a></li>
+			</ul>
+			<div id="main">
+				<div>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+				<div>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+				<div>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+			</div>
+		</section>
+		<footer id="footer"></footer>
+		<script src="js/jquery-3.1.0.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/personal.js"></script>
+	</body>
+</html>
+

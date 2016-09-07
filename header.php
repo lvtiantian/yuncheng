@@ -8,7 +8,7 @@
 		<li><a href="spot.html">景&nbsp;点</a></li>
 		<li><a href="food.html">特&nbsp;产</a></li>
 		<li><a href="contact.html">同城会</a></li>
-		<li><a href="personal.html">个人中心</a></li>
+		<li><a href="personal.html">用户中心</a></li>
 	</ul>
 </div>
 <div class="modal" style="display:none">

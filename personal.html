@@ -1,29 +1,133 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>魅力运城-个人中心</title>
+		<title>魅力运城-用户中心</title>
 		<meta charset="utf-8"/> 
 		<link rel="stylesheet" href="css/common.css"> 
 		<link rel="stylesheet" href="css/personal.css">
 		<link rel="icon" href="img/favicon.ico">
 		<style>
 			#section{
+				min-height:700px;
+				width:60%;
+				margin:20px auto;
+				color:#323A45;
+			}
+			#title{
+				background: #45B39E;
+				width:200px;
+				float: left;
+				overflow:hidden;
 				min-height:500px;
+				padding:20px 0;
+				border-top-left-radius:5px;
+				border-bottom-left-radius:5px;
+			}
+			#title li{
+				overflow:hidden;
+				text-align: center;
+			}
+			#title a{
+				display: inline-block;
+				color:#fff;
+				padding:9px 57px;
+				margin-left:20px;
+				border:2px solid transparent;
+				border-right:0;
+				border-top-left-radius:5px;
+				border-bottom-left-radius:5px;
+				transition: background 0.5s,color 0.5s;
+			}
+			#title a:hover,#title a.active{
+				background: #fff;
+				border-color:#ddd;
+				color:#323A45;
+			}
+			#main{
+				margin-left:200px;
+				padding:30px;
+				padding-top:0;
+				border:2px solid #45B39E;
+				border-left:0;
+				min-height: 540px;
+				box-sizing: border-box;
+				background:url(img/personal.jpg) no-repeat 100% 90%;
+			}
+			#main div{
+				display: none;
+			}
+			#main div p{
+				color:#323A45;
+				line-height:30px;
+				margin:18px 0;
+			}
+			#main div p img{
+				width:100px;
+				border:1px solid #ddd;
+				padding:5px;
+				border-radius: 53px;
+				vertical-align: middle;
+			}
+			#main div p input{
+				height:25px;
+				border-radius: 3px;
+				border: 1px solid #aaa;
+				outline:none;
+				width:300px;
+			}
+			#main div p button{
+				background: #00a300;
+				color:#fff;
+				font-family: "微软雅黑";
+				padding:5px 10px;
+				border:0;
+				font-size: 15px;
+				border-radius: 3px;
+				outline: none;
+				transition:background 0.3s;
+			}
+			#main div p button:hover{
+				cursor: pointer;
+				background: #006900;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="Totop">
-			<a href="#">To Top</a>
-		</div>
 		<header id="header">
 		</header>
 		<section id="section">
+			<ul id="title">
+				<li><a href="" class="active">个人信息</a></li>
+				<li><a href="">我的留言</a></li>
+				<li><a href="">回复我的</a></li>
+			</ul>
+			<div id="main">
+				<div>
+					<p>我的头像：<br/><img src="img/user_01.jpg"/></p>
+					<p>我的姓名：<br/><input type="text" value=""/></p>
+					<p>我的密码：<br/><input type="text" value=""/></p>
+					<p><button>保存修改</button></p>
+				</div>
+				<div>2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+				<div>3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+			</div>
 		</section>
 		<footer id="footer"></footer>
 		<script src="js/jquery-3.1.0.js"></script>
 		<script src="js/common.js"></script>
 		<script src="js/personal.js"></script>
+		<script>
+			$("#main div:first-child").show();
+			$("#title li a").click(function(e){
+				$("#title li a.active").removeClass("active");
+				$(this).addClass("active");
+				$("#main div").hide();
+				e.preventDefault();
+				var i=$(this).parent().index("#title li")+1;
+				$("#main div:nth-child("+i+")").show();
+			})
+
+		</script>
 	</body>
 </html>
 
