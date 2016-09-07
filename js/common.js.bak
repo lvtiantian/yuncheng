@@ -21,7 +21,7 @@ function login(){
 				
                 $(".modal").hide();
                 $("#Login").hide();
-				alert("ç™»å½•æˆåŠŸ");
+				window.alert("µÇÂ¼³É¹¦");
                 var uname=data.uname;
                 var key=data.user_id;
                 window.sessionStorage.setItem(key,uname);
