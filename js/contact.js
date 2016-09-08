@@ -7,7 +7,7 @@ $("#header").load("header.php",function(){
 	}
 });
 $("#footer").load("footer.php");
-$.getJSON("data/select_msg.php",function(data){
+$.getJSON("data/select_msg.php",{uname:""},function(data){
 	$(data).each(function(){
 		var date=new Date(parseInt(this.date));
 		var y=date.getFullYear();

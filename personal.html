@@ -9,7 +9,7 @@
 		<style>
 			#section{
 				min-height:700px;
-				width:60%;
+				width:80%;
 				margin:20px auto;
 				color:#323A45;
 			}
@@ -52,6 +52,7 @@
 				min-height: 540px;
 				box-sizing: border-box;
 				background:url(img/personal.jpg) no-repeat 100% 90%;
+				min-width:755px;
 			}
 			#main div{
 				display: none;
@@ -90,6 +91,48 @@
 				cursor: pointer;
 				background: #006900;
 			}
+			.msg{
+				margin-top:20px;
+				border-collapse: collapse;
+				border-radius: 5px;
+				font-size: 15px;
+			}
+			.msg a{
+				color: #2d84a3;
+			}
+			.msg td,.msg th {
+				text-align: center;
+				padding:8px 10px;
+			}
+			.msg thead{
+				background: #3b7663;
+				color:#fff;
+			}
+			.msg th{
+				width:8%;
+			}
+			.msg th:nth-child(2){
+				width:14%;
+			}
+			.msg th:nth-child(3){
+				width:50%;
+			}
+			.msg th:nth-child(4){
+				width:20%;
+			}
+			.msg tbody td{
+				padding:20px 0;
+			}
+			.msg tbody tr:nth-child(odd){
+				background:#fff;
+			}
+			.msg tbody tr:nth-child(even){
+				background: #4cd1bc;
+				color:#fff;
+			}
+			.msg tbody tr:nth-child(even) a{
+				color: #fff;
+			}
 		</style>
 	</head>
 	<body>
@@ -97,19 +140,33 @@
 		</header>
 		<section id="section">
 			<ul id="title">
-				<li><a href="" class="active">个人信息</a></li>
+				<li><a href="" class="active">修改信息</a></li>
 				<li><a href="">我的留言</a></li>
 				<li><a href="">回复我的</a></li>
 			</ul>
 			<div id="main">
 				<div>
 					<p>我的头像：<br/><img src="img/user_01.jpg"/></p>
-					<p>我的姓名：<br/><input type="text" value=""/></p>
-					<p>我的密码：<br/><input type="text" value=""/></p>
+					<p>我的姓名：<br/><input name="uname" type="text" value=""/></p>
+					<p>我的密码：<br/><input name="upwd" type="text" value=""/></p>
 					<p><button>保存修改</button></p>
 				</div>
-				<div>2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
-				<div>3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio expedita facilis laborum odio repellendus. Ab aliquam earum eius excepturi facere fuga iusto non pariatur quo, sapiente sed voluptate voluptatibus.</div>
+				<div>
+					<table class="msg">
+						<thead>
+						<tr>
+							<th>编 号</th>
+							<th>标 题</th>
+							<th>内 容</th>
+							<th>时 间</th>
+							<th>操 作</th>
+						</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div>该页面还没有开发</div>
 			</div>
 		</section>
 		<footer id="footer"></footer>
@@ -125,6 +182,60 @@
 				e.preventDefault();
 				var i=$(this).parent().index("#title li")+1;
 				$("#main div:nth-child("+i+")").show();
+			});
+			var key=window.sessionStorage.key(0);
+			var uname=window.sessionStorage.getItem(key);
+			$("#main div:first-child").click(function(){
+				$("$input")
+			});
+			//$("#title li:nth-child(2) a").click(function(){
+				$.getJSON("data/select_msg.php",{uname:uname},function(data){
+					var i=1;
+					$(data).each(function(){
+						var date=new Date(parseInt(this.date));
+						var y=date.getFullYear();
+						var M=date.getMonth()+1;
+						var d=date.getDate();
+						var h=date.getHours();
+						if(h<10){
+							h="0"+h;
+						}
+						var m=date.getMinutes();
+						if(m<10){
+							m="0"+m;
+						}
+						var s=date.getSeconds();
+						if(s<10){
+							s="0"+s;
+						}
+						var date=`${y}-${M}-${d} ${h}:${m}:${s}`;
+						$(".msg tbody").append(`
+							<tr>
+								<td>${i}</td>
+								<td>${this.msg_title}</td>
+								<td>${this.msg_content}</td>
+								<td>${date}</td>
+								<td><a href=''>删 除</a></td>
+							</tr>
+						`);
+						i++;
+					});
+					$(".msg tbody tr td:last-child a").click(function(e){
+						e.preventDefault();
+						var me=this;
+						console.log(me);
+						if(confirm("确认删除该条消息吗？")){
+							var title=$(this).parent().parent().children("td:nth-child(2)").html();
+							$.post("data/delete_msg.php",{uname:uname,title:title},function(text){
+								if(text=="succ"){
+									$(me).parent().parent().remove();
+								}else{
+									alert("糟糕，删除失败！");
+								}
+							})
+						}
+					});
+				//});
 			})
 
 		</script>

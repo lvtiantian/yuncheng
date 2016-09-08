@@ -18,7 +18,6 @@ function login(){
             if(data.msg!=='SUCC'){
                 $('.modal-content p').html(data.reason);
             }else{
-				
                 $(".modal").hide();
                 $("#Login").hide();
 				alert("登录成功");
@@ -28,4 +27,10 @@ function login(){
             }
         })
     });
+    $("#header .nav li:last-child a").click(function(e){
+        if(window.sessionStorage.length==0){
+            e.preventDefault();
+            alert("还没有登录，不能查看个人信息");
+        }
+    })
 }
