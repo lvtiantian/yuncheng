@@ -25,6 +25,7 @@
 						</div>
 						<button type="button" id="bt-login">登 录</button>
 						<span>还没有账号，快去<a href="regist.html"> 注册 </a>吧</span>
+						<b>&times;</b>
 					</form>
 				</div>
 			</div>
@@ -47,5 +48,5 @@
 			</ul>
 		</div>
 		<div id="Totop">
-			<a href="#">To Top</a>
+			<img src="img/totop.jpg"/>
 		</div>

@@ -64,7 +64,7 @@ $("#btnSend").click(function(){
 		var date=new Date();
 		var datenum=date.getTime();
 		if(title==""){
-			$('.modal-content p').html()
+			$('.modal-content p').html();
 		}
 		if(title!==""&&mainText!==""){
 			$.post('data/add_msg.php',{uid:uid,title:title,mainText:mainText,date:datenum},function(text){

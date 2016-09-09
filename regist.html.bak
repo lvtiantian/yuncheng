@@ -4,42 +4,37 @@
     <meta charset="UTF-8">
     <title>魅力运城-用户注册页面</title>
 	<link rel="stylesheet" href="css/common.css" />
-    <style>
-       #formList{
-		border:1px solid #eee;
-		color:#ddd;
-		font-size:15px;
-	   }
-	   #formList
-    </style>
+	<link rel="stylesheet" href="css/regist.css" />
 </head>
 <body>
+<img src="img/regist.jpg" alt=""/>
     <section>
         <h1 id="title">用户注册页面</h1>
 		<div id="formList">
 			<div>
-				<span>用户名</span>
-				<input name="username" id="uname" onfocus="getFocus(this)"
-		onblur="valiName(this)" placeholder="请输入用户名" autofocus required/>
+				<span>用户名：</span>
+				<input name="username" id="uname"
+		 placeholder="请输入用户名" autofocus required pattern="^[a-zA-Z0-9]{6,16}$"/>
 				<span>*</span>
-				<p class="vali_Info">10个字符以内的字母、数字和下划线的组合</p>
+				<p class="vali_Info">请输入6至16位的英文或数字</p>
 			</div>
 			<div>
 				<span>密  码：</span>
-				<input type="password" id="upwd" name="pwd"  onfocus="getFocus(this)" onblur="valiPwd(this)" placeholder="请输入密码" required/>
+				<input type="password" id="upwd" name="pwd"  placeholder="请输入密码" required pattern="^[0-9]{6,12}$"/>
 				<span>*</span>
-				<p class="vali_Info">6位数字</p>
+				<p class="vali_Info">请输入6至12位的数字</p>
 			</div>
 			<div>
 				<span>确认密码：</span>
-				<input type="password" id="upwd" name="pwd"  onfocus="getFocus(this)" onblur="valiPwd(this)" placeholder="请输入密码" required/>
+				<input type="password" id="repwd" name="pwd"  placeholder="请输入密码" required/>
 				<span>*</span>
-				<p class="vali_Info">6位数字</p>
+				<p class="vali_Info">请确认密码</p>
 			</div>
 			<div>
-				<input type="submit" value="注册"/>
+				<button id="regist">注 册</button>
 			</div>
 		</div>
+		<p class="success"></p>
     </section>
 	<script src="js/jquery-3.1.0.js"></script>
 	<script src="js/common.js"></script>

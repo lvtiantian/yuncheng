@@ -1,15 +1,16 @@
-
-$("#Totop").click(function(e){
-    e.preventDefault();
-    window.scrollTo(0,0);
-});
 function login(){
+    $("#Totop img").on("click",function(){
+    window.scrollTo(0,0);
+    });
     $("#Login ul li a").click(function(e){
         var target=e.target;
         if($(target).attr("href")=="login"){
             e.preventDefault();
             $(".tologin").hide();
             $(".modal").show();
+            $("#login-form b").click(function(){
+                $(".modal").hide();
+            })
         }
     });
     $("#bt-login").on("click",function(){

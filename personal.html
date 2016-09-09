@@ -133,6 +133,9 @@
 			.msg tbody tr:nth-child(even) a{
 				color: #fff;
 			}
+			.save{
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -140,16 +143,19 @@
 		</header>
 		<section id="section">
 			<ul id="title">
-				<li><a href="" class="active">修改信息</a></li>
+				<li><a href="" class="active">个人信息</a></li>
 				<li><a href="">我的留言</a></li>
 				<li><a href="">回复我的</a></li>
 			</ul>
 			<div id="main">
 				<div>
 					<p>我的头像：<br/><img src="img/user_01.jpg"/></p>
-					<p>我的姓名：<br/><input name="uname" type="text" value=""/></p>
-					<p>我的密码：<br/><input name="upwd" type="password" value=""/></p>
-					<p><button>保存修改</button></p>
+					<p>我的姓名：<br/>
+					<p>我的密码：<br/>
+					<p>
+					<button class="update">修改信息</button>
+					<button class="save">保存修改</button>
+				</p>
 				</div>
 				<div>
 					<table class="msg">

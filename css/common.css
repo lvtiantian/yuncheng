@@ -141,6 +141,7 @@ img{
 body{
  	font-family:"微软雅黑","黑体";
 }
+
 #Totop,#Login,#PriIntro{
 	position:fixed;
 	right:0;
@@ -152,7 +153,11 @@ body{
 	border-bottom-left-radius:5px;
 	overflow: hidden;
 }
-#Totop a,#Login a{
+#Totop{
+    border:0;
+    border-radius: 0;
+}
+#Login a{
 	color:#fff;
 	padding:5px;
 	background:#45B39E;
@@ -330,10 +335,20 @@ body{
     float:right;
     margin-top:10px;
     font-size:14px;
-
 }
 #login-form a{
     color:#45B39E;
+}
+#login-form b{
+    color: #A4A2A2;
+    position:absolute;
+    top:0;
+    left:94%;
+    font-size: 25px;
+}
+#login-form b:hover{
+    cursor: pointer;
+    color: #323232;
 }
 #bt-login{
     width: 400px;

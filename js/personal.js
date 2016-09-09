@@ -8,33 +8,44 @@ function getInfo(){
 	if(window.sessionStorage.length!==0){
 		$("#Login").hide();
 		var uid=window.sessionStorage.key(0);
-		$.getJSON("data/select_user.php",{uid:uid},function(data){
-			$("#main input[name='uname']").val(data.user_name);
-			$("#main input[name='upwd']").val(data.user_pwd);
-			$("#main p button").click(function(){
-				if($("#main input[name='uname']").val()==data.user_name&&$("#main input[name='upwd']").val()==data.user_pwd){
-					alert("您没有修改数据哦！");
-				}else{
-					var uname=$("#main input[name='uname']").val();
-					var upwd=$("#main input[name='upwd']").val();
-					$.post('data/update_user.php',{uid:uid,uname:uname,upwd:upwd},function(text){
-						if(text=='succ'){
-							alert("修改成功");
-							$("#main p:nth-child(2)").html(`我的姓名：${uname}
-								<input name="uname" type="text" value='${uname}'/>
+		var uname=window.sessionStorage.getItem(uid);
+		$("#main>div>p:nth-child(2)").html("我的姓名："+uname);
+		$("#main>div>p:nth-child(3)").html("我的密码：******");
+		$("#main>div>p button.update").click(function(){
+				$("#main p:nth-child(2)").html(`我的姓名：<br>
+				<input name="uname" type="text"/>
 							`);
-							$("#main p:nth-child(3)").html(`我的密码：******
-								<input name="upwd" type="password" value='${upwd}/>
+				$("#main p:nth-child(3)").html(`我的密码：<br>
+				<input name="upwd" type="password"/>
+			`);
+				//$("#main input").show();
+			$("#main button.update").hide();
+			$("#main button.save").show();
+			$("#main button.save").click(function(){
+				$.getJSON("data/select_user.php",{uid:uid},function(data){
+					if($("#main input[name='uname']").val()==data.user_name&&$("#main input[name='upwd']").val()==data.user_pwd){
+						alert("您没有修改数据哦！");
+					}else{
+						var uname=$("#main input[name='uname']").val();
+						var upwd=$("#main input[name='upwd']").val();
+						$.post('data/update_user.php',{uid:uid,uname:uname,upwd:upwd},function(text){
+							if(text=='succ'){
+								alert("修改成功");
+								$("#main p:nth-child(2)").html(`我的姓名：${uname}
 							`);
-							$("#main input").hide();
-							$("#main button").hide();
-							window.sessionStorage.clear();
-							window.sessionStorage.setItem(uid,uname);
-						}else{
-							alert("糟糕，出错了");
-						}
-					})
-				}
+								$("#main p:nth-child(3)").html(`我的密码：******
+							`);
+								$("#main input").hide();
+								$("#main button.save").hide();
+								$("#main button.update").show();
+								window.sessionStorage.clear();
+								window.sessionStorage.setItem(uid,uname);
+							}else{
+								alert("糟糕，出错了");
+							}
+						})
+					}
+				})
 			})
 		})
 	}else{
@@ -52,19 +63,8 @@ $("#title li a").click(function(e){
 	$("#main div:nth-child("+i+")").show();
 });
 var uid=window.sessionStorage.key(0);
-$("#title li:first-child a").click(function(){
-	var uname=window.sessionStorage.getItem(uid);
-	var upwd=$("#main input[name='upwd']").val();
-	console.log(upwd);
-	$("#main p:nth-child(2)").html(`我的姓名：<br>
-	<input name="uname" type="text" value="${uname}"/>
-							`);
-	$("#main p:nth-child(3)").html(`我的密码：<br>
-	<input name="upwd" type="password" value="${upwd}"/>
-							`);
-	$("#main input").show();
-	$("#main button").show();
-});
+var uname=window.sessionStorage.getItem(uid);
+
 //$("#title li:nth-child(2) a").click(function(){
 $.getJSON("data/select_msg.php",{uid:uid},function(data){
 	var i=1;
