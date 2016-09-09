@@ -75,7 +75,7 @@ $("#regist").on("click",function(){
 		if($("#formList div p.vali_Info:visible").length==0){
 			var uname=$("#uname").val();
 			var upwd=$("#upwd").val();
-			$.post("data/adduser.php",{uname:uname,upwd:upwd},function(text){
+			$.post("data/add_user.php",{uname:uname,upwd:upwd},function(text){
 				$("#formList").hide();
 				$(".success").html(text+"<a href='contact.html'> 回到同城会页面 </a>");
 			})

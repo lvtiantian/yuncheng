@@ -7,7 +7,7 @@ $("#header").load("header.php",function(){
 	}
 });
 $("#footer").load("footer.php");
-$.getJSON("data/select_msg.php",{uname:""},function(data){
+$.getJSON("data/select_msg.php",{uid:""},function(data){
 	$(data).each(function(){
 		var date=new Date(parseInt(this.date));
 		var y=date.getFullYear();
@@ -57,8 +57,8 @@ $("#btnSend").click(function(){
 	if(window.sessionStorage.length==0){
 		$(".tologin").show();
 	}else{
-		var key=window.sessionStorage.key(0);
-		var uname=window.sessionStorage.getItem(key);
+		var uid=window.sessionStorage.key(0);
+		var uname=window.sessionStorage.getItem(uid);
 		var title=$("input[name='title']").val();
 		var mainText=$("textarea[name='mainText']").val();
 		var date=new Date();
@@ -67,7 +67,7 @@ $("#btnSend").click(function(){
 			$('.modal-content p').html()
 		}
 		if(title!==""&&mainText!==""){
-			$.post('data/msgadd.php',{uname:uname,title:title,mainText:mainText,date:datenum},function(text){
+			$.post('data/add_msg.php',{uid:uid,title:title,mainText:mainText,date:datenum},function(text){
 				if(text=='succ'){
 					var y=date.getFullYear();
 					var M=date.getMonth()+1;
