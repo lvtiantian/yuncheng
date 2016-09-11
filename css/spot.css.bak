@@ -35,7 +35,7 @@
     top:26.5px;
 }
 #main div:nth-child(2){
-    left:calc(25% - 225px);
+    left:calc(32% - 225px);
 }
 #main div:nth-child(4){
     left:calc(75% - 225px);
