@@ -35,7 +35,7 @@
     top:26.5px;
 }
 #main div:nth-child(2){
-    left:calc(30% - 225px);
+    left:calc(25% - 225px);
 }
 #main div:nth-child(4){
     left:calc(75% - 225px);
@@ -62,7 +62,6 @@
     background: #edeae6;
     border-radius: 20px;
     min-height:450px;
-    height:500px;
 }
 #content div{
     color:#323A45;
