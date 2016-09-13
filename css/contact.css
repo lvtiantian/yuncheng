@@ -53,8 +53,8 @@
 #msgSend input {
     height: 30px;
 }
-
 #msgSend textarea {
+    font-family: "微软雅黑", "黑体";
     padding: 5px 2px;
 }
 

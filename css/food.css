@@ -2,7 +2,7 @@
 #section{
     width: 80%;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 800px;
 }
 #title{
     background-color: #fff;
@@ -31,7 +31,7 @@
     padding:0 10px;
 }
 #title ul li span{
-    transition: padding 0.3s;
+    transition: padding linear 0.4s;
 }
 #title ul{
     position: absolute;
