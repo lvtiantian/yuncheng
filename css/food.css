@@ -41,6 +41,7 @@
     border:2px solid #45B39E;
     background: #fff;
     display: none;
+    border-top:0;
     border-bottom-left-radius:60px;
     border-bottom-right-radius:60px;
     z-index: 100;
@@ -168,5 +169,20 @@
 }
 #foodIntro .right{
     padding:0 20px;
+
+}
+#foodIntro .right p{
+    color:#323232;
     text-indent: 24px;
+    line-height: 30px;
+}
+#foodIntro .right a{
+    color:#45B39E;
+    float: right;
+    padding:5px 0;
+
+}
+#foodIntro .right a:hover{
+    text-decoration: underline;
+    color: #2d6d5d;
 }

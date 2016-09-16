@@ -100,6 +100,7 @@ function showPage(allcount,elem){
 				for(var p=min;p<=max;p++){
 					if(p<allcount){
 						$("#content>div."+elem)[p].style.display="flex";
+						$("#content>div:last-child")[0].style.display="block";
 					}
 				}
 				$("#page .active").removeClass("active");
