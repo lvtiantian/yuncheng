@@ -162,10 +162,26 @@ body{
     width: 50px;
 }
 @-webkit-keyframes rotate {
-    0% {transform: rotateZ(0deg);}
-    100% {transform: rotateZ(360deg);}
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+
+    }
+    100% {
+        transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+    }
 }
 #Totop img:hover{
+    animation: rotate 0.3s;
+    -moz-animation: rotate 0.3s;
+    -o-animation: rotate 0.3s;
     -webkit-animation: rotate 0.3s;
 }
 #Login a{
