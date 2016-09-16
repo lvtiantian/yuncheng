@@ -155,6 +155,18 @@ body{
 #Totop{
     border:0;
     border-radius: 0;
+    right: 10px;
+}
+#Totop img{
+    cursor: pointer;
+    width: 50px;
+}
+@-webkit-keyframes rotate {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(360deg);}
+}
+#Totop img:hover{
+    -webkit-animation: rotate 0.3s;
 }
 #Login a{
 	color:#fff;
@@ -232,7 +244,7 @@ body{
 
 #Login{
     bottom: 50%;
-    margin-bottom:-36px;
+    margin-bottom:-100px;
 }
 #Login li{
     background: #45B39E;
@@ -312,15 +324,9 @@ body{
     padding: 5px 0;
     padding-left: 5px;
 }
-
-.modal-content div {
-
-}
-
 .modal-content span {
     margin-right: 6px;
 }
-
 .modal-content input {
     border: 1px solid #ddd;
     width: 340px;

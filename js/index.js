@@ -91,3 +91,11 @@ $("#banner").on("mouseout",function(){
     timer=null;
     timer=setInterval(slider,1000);
 });
+$(".spot-intro li a").on("mouseover",function(){
+    var index=$(this).parent().index(".spot-intro li")+1;
+    $(".spot-intro li:nth-child("+index+") img").css("transform","scale(1.2)")
+})
+$(".spot-intro li a").on("mouseout",function(){
+    var index=$(this).parent().index(".spot-intro li")+1;
+    $(".spot-intro li:nth-child("+index+") img").css("transform","scale(1)")
+})

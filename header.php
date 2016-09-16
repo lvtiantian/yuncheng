@@ -48,5 +48,5 @@
 			</ul>
 		</div>
 		<div id="Totop">
-			<img src="img/totop.jpg"/>
+			<img src="img/totop.png"/>
 		</div>

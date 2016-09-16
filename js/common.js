@@ -1,6 +1,15 @@
 function login(){
     $("#Totop img").on("click",function(){
-    window.scrollTo(0,0);
+        var height=window.scrollY;
+        var timer= setInterval(function(){
+            height-=5;
+            window.scrollTo(0,height);
+            if(height<=0){
+                clearInterval(timer);
+                timer=null;
+                move=0;
+            }
+        },0.1);
     });
     $("#Login ul li a").click(function(e){
         var target=e.target;
@@ -33,5 +42,5 @@ function login(){
             e.preventDefault();
             alert("还没有登录，不能查看个人信息");
         }
-    })
+    });
 }

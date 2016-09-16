@@ -93,19 +93,24 @@
 	width:29%;
 	margin-right:6%;
 	box-shadow:5px 56px 36px -57px #121D12;
+	overflow: hidden;
+
+}
+.spot-intro li div{
+	overflow: hidden;
 }
 .spot-intro li:last-child,.food-intro li:last-child{
 	margin-right:0;
 }
 .spot-intro li img,.food-intro li img{
 	width:100%;
+	transition:transform linear 0.5s;
 }
 .spot-intro li h3,.food-intro li h3{
 	color:#45B39E;
 	font:20px/40px "微软雅黑";
 	font-weight:normal;
 	border-bottom:1px solid #e2e2e2;
-	background:#fff;
 }
 .spot-intro li p{
 	font:14px/25px "微软雅黑";
@@ -171,6 +176,18 @@
 	position:absolute;
 	left:calc(50% - 35px);
 	top:calc(50% - 20px);
+}
+.food-intro li div{
+	overflow: hidden;
+}
+.food-intro li img{
+	transform:scale(1);
+}
+.food-intro li img{
+	transition: transform linear 0.3s;
+}
+.food-intro li img:hover{
+	transform:scale(1.2);
 }
 #food-show{
 	position:relative;
