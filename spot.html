@@ -12,7 +12,6 @@
 		</header>
 		<section id="section">
 			<div id="main">
-				<!--<div><img src="img/dayudu_s.jpg" alt=""/></div>-->
 				<div><img src="img/shundiling_s.jpg" alt=""/></div>
 				<div><img src="img/fenglingdu_s.jpg" alt=""/></div>
 				<div><img src="img/yonglegong_s.jpg" alt=""/></div>
@@ -214,7 +213,7 @@
 					'height':'106px',
 					'top':'79.5px',
 					'opacity':'0'
-				},500,function(){
+				},250,function(){
 					$("#main").append(this);
 					$(this).css("width",'180px').css("height",'106px').css("top","79.5px").css('left',othleft6).css('opacity','0').css('z-index','0').css('display','none');
 				});
@@ -223,7 +222,7 @@
 					'width':'270px',
 					'height':'159px',
 					'top':'53px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","10");
 				});
 				$("#main div:nth-child(3)").animate({
@@ -231,7 +230,7 @@
 					'width':'360px',
 					'height':'212px',
 					'top':'26.5px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","30");
 				});
 				$("#main div:nth-child(4)").css("z-index","50").animate({
@@ -239,13 +238,13 @@
 					'width':'450px',
 					'height':'265px',
 					'top':0
-				},500);
+				},250);
 				$("#main div:nth-child(5)").animate({
 					'left':othleft4,
 					'width':'360px',
 					'height':'212px',
 					'top':'26.5px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","30");
 				});
 				$("#main div:nth-child(6)").css('display','block').animate({
@@ -254,18 +253,18 @@
 					'height':'159px',
 					'top':'53px',
 					'opacity':'1'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","5");
 				});
 				$("#content div.active").animate({
 					'opacity':'0'
-				},500,function(){
+				},250,function(){
 					$(this).removeClass("active");
-					$(this).insertBefore("#content b");
+					$(this).insertBefore("#content>b");
 				});
 				$("#content div.active").next('div').animate({
 					'opacity':'1'
-				},500,function(){
+				},250,function(){
 					$(this).addClass("active");
 				});
 			}
@@ -276,7 +275,7 @@
 					'height':'159px',
 					'top':'53px',
 					'opacity':'1'
-				},500,function(){
+				},250,function(){
 					$(this).insertBefore("#main div:first-child");
 					$(this).css("z-index","10");
 				});
@@ -285,7 +284,7 @@
 					'width':'360px',
 					'height':'212px',
 					'top':'26.5px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","30");
 				});
 				$("#main div:nth-child(2)").css("z-index",'50').animate({
@@ -293,13 +292,13 @@
 					'width':'450px',
 					'height':'265px',
 					'top':0
-				},500);
+				},250);
 				$("#main div:nth-child(3)").css("z-index",'40').animate({
 					'left':othleft4,
 					'width':'360px',
 					'height':'212px',
 					'top':'26.5px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","30");
 				});
 				$("#main div:nth-child(4)").animate({
@@ -307,7 +306,7 @@
 					'width':'270px',
 					'height':'159px',
 					'top':'53px'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","5");
 				});
 				$("#main div:nth-child(5)").animate({
@@ -316,18 +315,18 @@
 					'height':'106px',
 					'top':'79.5px',
 					'opacity':'0'
-				},500,function(){
+				},250,function(){
 					$(this).css("z-index","5").css('display','none');
 				});
-				$("#content div:nth-child(6)").insertBefore("#content .active");
-				$("#content .active").animate({
+				$("#content>div:nth-child(6)").insertBefore("#content>div:first-child");
+				$("#content>div.active").animate({
 					'opacity':'0'
-				},500,function(){
+				},250,function(){
 					$(this).removeClass("active");
 				});
-				$("#content .active").prev('div').animate({
+				$("#content>div.active").prev('div').animate({
 					'opacity':'1'
-				},500,function(){
+				},250,function(){
 					$(this).addClass("active");
 				});
 			}
@@ -356,17 +355,16 @@
 							clearInterval(timer);
 							timer=null;
 						}
-					},1000);
+					},500);
 				}else if(i<3){
 					var timer=setInterval(function(){
 						moveAutoRight();
 						i++;
-						console.log(i);
 						if(i==3){
 							clearInterval(timer);
 							timer=null;
 						}
-					},1000);
+					},500);
 				}
 			});
 			$("#content div ul li:first-child p:first-child").addClass("active");
